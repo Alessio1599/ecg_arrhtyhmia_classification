@@ -15,25 +15,27 @@ The dataset contains 5 classes of beats:
 5. Unclassifiable Beats
 
 ```
-├── README.md               # Project documentation
-├── configs                 # Configuration files
-│   ├── cnn_sweep_config.yml # Hyperparameter tuning config
-│   └── config.yml           # General model & training config
-├── models                  # Saved models
-│   └── cnn                 # CNN model checkpoints
-│       └── best_cnn_model_v1_script.keras
-├── notebooks               # Jupyter notebooks for analysis
-│   ├── exploratory_data_analysis.ipynb
-│   └── single_ecg_classification_COLAB_KAGGLE.ipynb
-├── report.pdf              # Detailed report with CNN & RNN results
-└── src                     # Source code
+ecg_arrhythmia_classification/
+├── README.md                               # Project documentation
+├── configs                                 # Configuration files
+│   ├── cnn_sweep_config.yml               # Hyperparameter tuning config
+│   └── config.yml                          # General model & training config
+├── models                                  # Saved models
+│   └── cnn                                # CNN model checkpoints
+│       └── best_cnn_model_v1_script.keras # Best trained CNN model
+├── notebooks                               # Jupyter notebooks for analysis
+│   ├── eda.ipynb                          # Exploratory Data Analysis (EDA)
+│   └── single_ecg_classification_COLAB_KAGGLE.ipynb  # Training on Colab/Kaggle
+├── report.pdf                              # Detailed report with CNN & RNN results
+└── src                                     # Source code
     ├── cnn_hyperparameter_optimization.py  # CNN hyperparameter tuning
-    ├── cnn_train.py                         # CNN training script
-    ├── config.py                            # Configuration loader
-    ├── data_preprocessing.py                # Data preprocessing
-    ├── eval.py                              # Model evaluation
-    ├── models.py                            # CNN model architecture
-    └── utils.py                             # Utility functions
+    ├── cnn_train.py                        # CNN training script
+    ├── config.py                           # Configuration loader
+    ├── data_preprocessing.py               # Data preprocessing
+    ├── eval.py                             # Model evaluation
+    ├── models.py                           # CNN model architecture
+    └── utils.py                            # Utility functions
+
 ```
 
 ## Installation & Setup
@@ -67,7 +69,7 @@ The model and logs will be saved in the models/cnn/ directory.
 
 ### Hyperparameter Tuning with WandB
 To run a hyperparameter sweep using Weights & Biases:
-```
+```bash
 wandb sweep configs/cnn_sweep_config.yml
 wandb agent <SWEEP_ID>
 ```
@@ -89,10 +91,3 @@ python src/eval.py
 - Hyperparameter tuning using WandB
 - Model training
 - Performance evaluation (confusion matrix, Precision and Recall)
-
-
-
-
-### More details
-- wandb to track the experiments
-- configuration files (possibility to change parameters by editing the json file without touching the code)
