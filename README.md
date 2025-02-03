@@ -14,6 +14,7 @@ The dataset contains 5 classes of beats:
 4. Fusion Beats
 5. Unclassifiable Beats
 
+## Project Structure
 ```
 ecg_arrhythmia_classification/
 ├── README.md                               # Project documentation
