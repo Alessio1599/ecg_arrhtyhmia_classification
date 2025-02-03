@@ -15,7 +15,7 @@ data:
 #  class_names = {i: name for i, name in enumerate(cfg["class_names"])} # Create a dictionary
 # class_names = cfg["class_names"]  # Directly access the list from config
 
-hyperparameters:
+hyperparameters: # Default hyperparameters
   layer_1_size: 64
   layer_2_size: 64
   layer_3_size: 64
