@@ -1,0 +1,31 @@
+# Data settings
+data:
+  raw_root: "data/raw/"          # Raw data path
+  processed_root: "data/processed/"  # Preprocessed data save path
+  val_size: 0.2
+  scaling: "standard"  # Options: "standard", "minmax"
+  class_names:
+    - "Normal Beats"
+    - "Supraventricular Ectopy Beats"
+    - "Ventricular Ectopy Beats"
+    - "Fusion Beats"
+    - "Unclassifiable Beats"
+
+# To access to the class names, you can use the following code
+#  class_names = {i: name for i, name in enumerate(cfg["class_names"])} # Create a dictionary
+# class_names = cfg["class_names"]  # Directly access the list from config
+
+hyperparameters:
+  layer_1_size: 64
+  layer_2_size: 64
+  layer_3_size: 64
+  layer_FC_size: 64
+  dropout_rate: 0.4
+  learning_rate: 4e-4
+  batch_size: 32
+  epochs: 7
+
+model:
+  checkpoint_path: "models/cnn/best_cnn_model_v1_script.keras"
+  early_stopping_patience: 5
+  class_weights: true

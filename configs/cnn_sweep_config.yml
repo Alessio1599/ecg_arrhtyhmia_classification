@@ -1,0 +1,36 @@
+# The program to run
+program: CNN_hyperparameter_optimization.py # I have to create a train.py file in the same directory
+
+# Method can be grid, random or bayes
+method: bayes #random #grid # grid search
+name: cnn_sweep
+# Metric to optimize
+metric:
+  goal: minimize
+  name: val_loss
+
+# Parameters space to search
+parameters:
+  layer_1_size:
+    values: [32, 64, 128] #256, 512
+  layer_2_size:
+    values: [32, 64, 128]
+  layer_3_size:
+    values: [16, 32, 64]
+  layer_FC_size:
+    values: [32, 64, 96] #128 #256
+  dropout_rate:
+    values: [0.2, 0.25, 0.3, 0.4, 0.5]
+  learning_rate:
+    distribution: log_uniform_values
+    min: 1e-4
+    max: 1e-2 #1e-2 = 0.01
+  batch_size:
+    values: [8, 16, 32, 48, 64] #128 # maybe from 8 to 64 maximum with 8 as step
+  epochs:
+    value: 10
+
+# Hyperparameter scheduler for early stopping of underperforming trials, saving resources
+early_terminate:
+  type: hyperband
+  min_iter: 3
