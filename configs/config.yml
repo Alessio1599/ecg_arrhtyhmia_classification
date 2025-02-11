@@ -1,7 +1,7 @@
 # Data settings
 data:
-  raw_root: "data/raw/"          # Raw data path
-  processed_root: "data/processed/"  # Preprocessed data save path
+  raw_root: "datasets/raw/"          # Raw data path
+  processed_root: "datasets/processed/"  # Preprocessed data save path
   val_size: 0.2
   scaling: "standard"  # Options: "standard", "minmax"
   class_names:
