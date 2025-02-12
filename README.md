@@ -41,8 +41,8 @@ ecg_arrhythmia_classification/
 
 ## Installation & Setup
 ```bash
-git clone https://github.com/yourusername/single-ecg-classification.git
-cd single-ecg-classification
+git clone https://github.com/Alessio1599/ecg_arrhtyhmia_classification.git
+cd ecg_arrhtyhmia_classification
 ```
 
 ### Install dependendices
