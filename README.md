@@ -5,7 +5,7 @@ This repository contains the implementation of deep learning models for the clas
 
 
 ## Dataset
-MIT-BIH Arrhythmia Dataset
+- [MIT-BIH Arrhythmia Dataset, Kaggle dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
 The dataset consists of 48 half-hour ECG recordings sampled at 360 Hz, collected from 47 different patients.
 The dataset contains 5 classes of beats:
 1. Normal Beats
